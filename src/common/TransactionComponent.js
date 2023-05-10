@@ -1,7 +1,7 @@
 const TransactionComponent = ({transactions}) => {
     return (
         <>
-    {transactions.map((item)=><p>{item.desc}</p>)}
+    {transactions.map((item)=><p key={item.id}>{item.desc}</p>)}
     </>
     );
 }
