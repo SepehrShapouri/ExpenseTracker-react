@@ -1,5 +1,9 @@
 const TransactionComponent = ({transactions}) => {
-    return ( <p>transactions!</p> );
+    return (
+        <>
+    {transactions.map((item)=><p>{item.desc}</p>)}
+    </>
+    );
 }
  
 export default TransactionComponent;
