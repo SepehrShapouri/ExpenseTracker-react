@@ -1,9 +1,13 @@
-const TransactionComponent = ({transactions}) => {
-    return (
-        <>
-    {transactions.map((item)=><p key={item.id}>{item.desc}</p>)}
+import Transaction from "./Transaction";
+
+const TransactionComponent = ({ transactions }) => {
+  return (
+    <>
+      {transactions.map((item) => (
+        <Transaction desc={item.desc} amount={item.amount} key={item.id} />
+      ))}
     </>
-    );
-}
- 
+  );
+};
+
 export default TransactionComponent;
