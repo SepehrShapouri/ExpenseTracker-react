@@ -44,7 +44,7 @@ const TransactionForm = ({ addTransaction }) => {
         />
         <label>Income</label>
       </div>
-      <button>Add transaction</button>
+      <button className="btn primary">Add transaction</button>
     </form>
   );
 };

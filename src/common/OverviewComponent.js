@@ -6,14 +6,18 @@ const OverviewComponent = ({ expense, income, addTransaction }) => {
     <>
       <div className="topSection">
         <p>balance :{income - expense}</p>
-        <button onClick={() => setIsShow((prevState) => !prevState)}>
+        <button onClick={() => setIsShow((prevState) => !prevState)} className={`btn ${isShow && "cancel"}`}>
           {isShow ? "Cancel" : "Add"}
         </button>
       </div>
       {isShow && <TransactionForm addTransaction={addTransaction} />}
       <div className="resultSection">
-        <div>expense : {expense}</div>
-        <div>income : {income}</div>
+        <div className="expenseBox">
+          expense <span style={{ color: "red" }}>{expense} $</span>
+        </div>
+        <div className="expenseBox">
+          income <span>{income} $</span>
+        </div>
       </div>
     </>
   );

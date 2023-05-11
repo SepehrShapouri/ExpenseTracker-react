@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TransactionComponent from "./TransactionComponent";
 import OverviewComponent from "./OverviewComponent";
 const ExpenseApp = () => {
@@ -10,6 +10,13 @@ const ExpenseApp = () => {
     setTransactions([...transactions,data])
     console.log(data)
   };
+  useEffect(()=>{
+    let exp = 0
+    let inc = 0
+    transactions.forEach((t)=>{t.type === "expense" ? (exp = exp + parseFloat(t.amount)) : (inc = inc + parseFloat(t.amount))})
+    setExpense(exp)
+    setIncome(inc)
+  },[transactions])
   return (
     <section className="container">
       <OverviewComponent
