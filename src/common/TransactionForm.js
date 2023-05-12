@@ -16,33 +16,37 @@ const TransactionForm = ({ addTransaction }) => {
     <form onSubmit={submitHandler}>
         <div className="inputHolder">
       <input
+      className="input"
         type="text"
         name="desc"
         defaultValue={formValues.descp}
         onChange={changeHandler}
       />
       <input
+      className="input"
         type="number"
         name="amount"
         defaultValue={formValues.amount}
         onChange={changeHandler}
       />
       </div>
-      <div>
+      <div className="radioBox">
         <input
           type="radio"
           value="expense"
           name="type"
           onChange={changeHandler}
+          id="expense"
         />
-        <label>Expense</label>
+        <label htmlFor="expense">Expense</label>
         <input
           type="radio"
           value="income"
           name="type"
           onChange={changeHandler}
+          id="income"
         />
-        <label>Income</label>
+        <label htmlFor="income">Income</label>
       </div>
       <button className="btn primary">Add transaction</button>
     </form>

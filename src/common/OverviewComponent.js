@@ -5,7 +5,7 @@ const OverviewComponent = ({ expense, income, addTransaction }) => {
   return (
     <>
       <div className="topSection">
-        <p>balance :{income - expense}</p>
+        <p className="balance">balance : {income - expense} $</p>
         <button onClick={() => setIsShow((prevState) => !prevState)} className={`btn ${isShow && "cancel"}`}>
           {isShow ? "Cancel" : "Add"}
         </button>

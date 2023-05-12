@@ -4,7 +4,7 @@ const TransactionComponent = ({ transactions }) => {
   return (
     <>
       {transactions.map((item) => (
-        <Transaction desc={item.desc} amount={item.amount} key={item.id} />
+        <Transaction desc={item.desc} amount={item.amount} key={item.id} type={item.type}/>
       ))}
     </>
   );

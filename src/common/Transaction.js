@@ -1,8 +1,8 @@
 const Transaction = ({ desc, amount,type}) => {
   return (
-    <div className="transaction">
-      <p>{desc}</p>
-      <p>{amount}</p>
+    <div className="transaction" style={{borderRight:type === "expense" && "4px solid red"}}>
+      <span>{desc}</span>
+      <span>{amount}</span>
     </div>
   );
 };
