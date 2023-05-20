@@ -14,21 +14,21 @@ const TransactionForm = ({ addTransaction }) => {
   };
   return (
     <form onSubmit={submitHandler}>
-        <div className="inputHolder">
-      <input
-      className="input"
-        type="text"
-        name="desc"
-        defaultValue={formValues.descp}
-        onChange={changeHandler}
-      />
-      <input
-      className="input"
-        type="number"
-        name="amount"
-        defaultValue={formValues.amount}
-        onChange={changeHandler}
-      />
+      <div className="inputHolder">
+        <input
+          className="input"
+          type="text"
+          name="desc"
+          defaultValue={formValues.descp}
+          onChange={changeHandler}
+        />
+        <input
+          className="input"
+          type="number"
+          name="amount"
+          defaultValue={formValues.amount}
+          onChange={changeHandler}
+        />
       </div>
       <div className="radioBox">
         <input
